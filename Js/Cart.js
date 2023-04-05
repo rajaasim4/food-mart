@@ -305,7 +305,7 @@ let generateCartItem = () => {
         let search = allProductsData.find((val) => val.id === id) || [];
         let { name, price, imgsrc } = search;
         return ` <tr class="h-[130px] md:h-max z-10">
-      <td class="text-center  md:block md:text-right ">
+      <td class="text-center  md:block md:flex md:justify-end ">
         <img
           src=${imgsrc}
           class="w-24 h-20 "
@@ -313,7 +313,7 @@ let generateCartItem = () => {
         />
       </td>
       <td class="text-right md:block md:text-right md:relative " data-aria-label="Name">${name}</td>
-      <td class="text-center md:block md:w-full md:text-right md:before:content-[attr(data-aria-label)] md:before:absolute md:before:left-0 md:before:text-left md:relative  " data-aria-label="Quantity"> <div class="flex items-center justify-center gap-x-2">
+      <td class="text-center md:block md:w-full md:text-right md:before:content-[attr(data-aria-label)] md:before:absolute md:before:left-0 md:before:text-left md:relative  " data-aria-label="Quantity"> <div class="flex items-center justify-center gap-x-2 md:justify-end">
       <button
         class="w-8 h-8 rounded-lg  border border-gray-400" onclick="increment(${id})" id="raja"
       >
