@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-40">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="shortcut icon" href="./Favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./StyleSheet/Style.css" />
+    <title>FoodMart | Welcome</title>
+  </head>
+  <body>
+    <header class="py-3 sticky top-0 left-0 bg-white z-20 3xl:py-4">
+      <div
+        class="w-11/12 mx-auto py-5 flex items-center justify-between 3xl:w-[1600px]"
+      >
+        <div class="">
+          <img src="./Assets/logo.png" class="object-contain" alt="" />
+        </div>
+        <div class="bg-primarycolor w-5/12 flex xl:hidden rounded-lg">
+          <select name="" id="" class="bg-transparent h-12 px-2 outline-none">
+            <option value="" selected>All Categories</option>
+            <option value="">Friuts and Vegas</option>
+            <option value="">Breads & Sweets</option>
+            <option value="">Oil & Ghee</option>
+            <option value="">Raw Meat</option>
+            <option value="">Natural Herbs</option>
+          </select>
+          <input
+            type="search"
+            name=""
+            id=""
+            class="bg-transparent h-12 outline-none px-3 w-8/12"
+            placeholder="Search more than 20,000 products"
+          />
+        </div>
+        <div
+          class="flex justify-evenly w-4/12 xl:w-6/12 md:fixed md:w-full md:bottom-0 md:left-0 md:bg-[#ffeada] md:rounded-md md:shadow-md md:py-4 md:flex-wrap"
+        >
+          <div class="md:hidden">
+            <span class="text-primarytextcolor"> For Support? </span>
+            <p>+123 456 7890</p>
+          </div>
+          <span
+            class="h-10 w-10 rounded-full bg-[#f1f1f1] grid place-items-center cursor-pointer"
+            title="Create Account"
+            onclick="window.location.href='../Pages/Login.html'"
+          >
+            <i class="fa-solid fa-user"></i>
+          </span>
+          <span
+            class="h-10 w-10 rounded-full bg-[#f1f1f1] grid place-items-center relative cursor-pointer"
+            title="Your WishList"
+            ><i class="fa-solid fa-heart"></i>
+            <span
+              class="bg-yellow-400 text-sm h-6 w-6 rounded-full flex justify-center items-center absolute -top-2 -right-3 border-2 border-white"
+              id="wishlist"
+              >0</span
+            >
+          </span>
+          <div class="flex gap-x-5">
+            <span
+              class="h-10 w-10 rounded-full bg-[#f1f1f1] grid place-items-center relative cursor-pointer"
+              title="Your Cart"
+              onclick="window.location.href='./Pages/Cart.html'"
+            >
+              <span
+                class="bg-yellow-400 text-sm h-6 w-6 rounded-full flex justify-center items-center absolute -top-2 -right-3 border-2 border-white"
+                id="cartTotalQuantity"
+                >0</span
+              >
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+            <div class="">
+              <span class="text-primarytextcolor"> Your Cart </span>
+              <p class="font-medium">$0</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-max hidden md:block">
+          <button class="text-4xl" id="Hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav>
+        <div class="w-11/12 mx-auto mt-5 3xl:w-[1600px]">
+          <div
+            class="flex justify-around lg:flex-col lg:gap-y-6 items-center md:fixed md:top-0 md:right-0 md:bg-[#FFF9EB] md:h-full md:overflow-x-hidden md:w-0 duration-500"
+            id="Navbar"
+          >
+            <ul
+              class="flex justify-evenly w-7/12 lg:w-full md:h-4/5 md:flex-col md:items-center md:w-full relative"
+            >
+              <span
+                class="absolute cursor-pointer right-9 top-9 text-4xl font-light hidden md:block"
+                id="close"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </span>
+              <li>
+                <a href="#Home" class="bg-yellow-400 px-5 py-3 rounded-lg"
+                  >Home</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#Shop"
+                  class="hover:bg-yellow-400 px-5 py-3 rounded-lg duration-300"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#Category"
+                  class="hover:bg-yellow-400 px-5 py-3 rounded-lg duration-300"
+                  >Category</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#Brands"
+                  class="hover:bg-yellow-400 px-5 py-3 rounded-lg duration-300"
+                  >Brands</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#Discount"
+                  class="hover:bg-yellow-400 px-5 py-3 rounded-lg duration-300"
+                  >Discount</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#Contact"
+                  class="hover:bg-yellow-400 px-5 py-3 rounded-lg duration-300"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#Offers"
+                  class="hover:bg-yellow-400 px-5 py-3 rounded-lg duration-300"
+                  >Offers</a
+                >
+              </li>
+            </ul>
+            <div class="flex gap-x-2 items-center cursor-pointer md:h-1/5">
+              <i class="fa-solid fa-gift text-2xl text-yellow-400"></i>
+              <span class="font-semibold">Get your coupon code</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="min-h-96 w-full bg-repeat bg-contain bg-[linear-gradient(to_right,(#FFF6E2) 50%,(#FFF7EA) 50%),url('../Assets/Banner.png')] 3xl:w-[1600px] 3xl:mx-auto"
+      >
+        <div class="grid grid-cols-2 gap-5 py-9 w-11/12 mx-auto lg:grid-cols-1">
+          <div
+            class="bg-[#E6F3FA] rounded-lg flex gap-x-4 pl-10 items-center smd:py-4 smd:flex-col"
+          >
+            <div
+              class="flex flex-col justify-around h-max gap-y-9 w-1/2 smd:w-full"
+            >
+              <h5 class="text-[#ED8939] text-4xl font-garamondfont">
+                100% Natural
+              </h5>
+              <h2
+                class="text-5xl font-medium font-nunitofont xlg:text-4xl md:text-3xl"
+              >
+                Fresh Smoothie & <br />
+                Summer Juice
+              </h2>
+              <p class="text-[#727272] font-opensans">
+                Best selling summer juice with natural extracts.
+              </p>
+              <button
+                class="uppercase border-2 w-36 py-3 border-[#222] rounded-md hover:border-gray-400 hover:bg-black hover:text-white duration-500"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div class="w-1/2">
+              <img src="./Assets/Header_img1.png" alt="" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-5">
+            <div
+              class="bg-[#EEF5E4] rounded-lg pl-7 flex justify-between bg-bannerbg1 bg-right bg-no-repeat min-h-[300px] py-6 smd:bg-left"
+            >
+              <div class="flex flex-col gap-y-4">
+                <h4
+                  class="text-4xl font-garamondfont text-[#BC4B68] smd:text-3xl"
+                >
+                  20% Off
+                </h4>
+                <span>______Sale</span>
+                <h3 class="text-4xl font-nunitofont xlg:text-3xl md:text-2xl">
+                  Fruits & Vegetables
+                </h3>
+                <a
+                  class="border-2 w-max px-4 py-3 border-[#222] rounded-md hover:border-gray-400 hover:bg-black hover:text-white duration-500"
+                  href="#Category"
+                  >Shop By Category &rarr;</a
+                >
+              </div>
+            </div>
+            <div
+              class="bg-[#F9ECDE] rounded-lg pl-10 pt-8 bg-bannerbg2 bg-right-bottom bg-no-repeat min-h-[300px] py-6 smd:bg-center"
+            >
+              <div class="flex flex-col gap-y-4">
+                <h4
+                  class="text-[#BC4B68] text-4xl font-garamondfont smd:text-3xl"
+                >
+                  20% Off
+                </h4>
+                <span>______Sale</span>
+                <h3 class="text-4xl font-nunitofont xlg:text-3xl md:text-2xl">
+                  Baked Products
+                </h3>
+                <a
+                  class="border-2 w-max px-4 py-3 border-[#222] rounded-md hover:border-gray-400 hover:bg-black hover:text-white duration-500"
+                  href="#Category"
+                  >Shop By Category &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="py-10"></div>
+      <section class="py-4 3xl:w-[1600px] 3xl:mx-auto" id="Category">
+        <div class="w-11/12 mx-auto">
+          <h4 class="text-[#222222] text-3xl">Category</h4>
+          <div
+            class="py-5 w-full mt-3 flex justify-between gap-x-4 gap-y-5 flex-wrap xl:justify-evenly"
+          >
+            <div
+              class="w-[201px] h-[205px] rounded-xl border-2 shadow-md hover:shadow-xl border-[#F1F1F1] flex justify-center flex-col items-center gap-y-4 cursor-pointer"
+            >
+              <img src="./Assets/category_img1.svg" alt="" />
+              <h4 class="text-xl font-opensans">Fruits & Vegas</h4>
+            </div>
+            <div
+              class="w-[201px] h-[205px] rounded-xl border-2 shadow-md hover:shadow-xl border-[#F1F1F1] flex justify-center flex-col items-center gap-y-4 cursor-pointer"
+            >
+              <img src="./Assets/category_img2.svg" alt="" />
+              <h4 class="text-xl font-opensans">Breads & Sweets</h4>
+            </div>
+            <div
+              class="w-[201px] h-[205px] rounded-xl border-2 shadow-md hover:shadow-xl border-[#F1F1F1] flex justify-center flex-col items-center gap-y-4 cursor-pointer"
+            >
+              <img src="./Assets/category_img3.svg" alt="" />
+              <h4 class="text-xl font-opensans">Fruits & Vegas</h4>
+            </div>
+            <div
+              class="w-[201px] h-[205px] rounded-xl border-2 shadow-md hover:shadow-xl border-[#F1F1F1] flex justify-center flex-col items-center gap-y-4 cursor-pointer"
+            >
+              <img src="./Assets/category_img4.svg" alt="" />
+              <h4 class="text-xl font-opensans">Oil & Ghee</h4>
+            </div>
+            <div
+              class="w-[201px] h-[205px] rounded-xl border-2 shadow-md hover:shadow-xl border-[#F1F1F1] flex justify-center flex-col items-center gap-y-4 cursor-pointer"
+            >
+              <img src="./Assets/category_img5.svg" alt="" />
+
+              <h4 class="text-xl font-opensans">Raw Meat</h4>
+            </div>
+            <div
+              class="w-[201px] h-[205px] rounded-xl border-2 shadow-md hover:shadow-xl border-[#F1F1F1] flex justify-center flex-col items-center gap-y-4 cursor-pointer"
+            >
+              <img src="./Assets/category_img6.svg" alt="" />
+
+              <h4 class="text-xl font-opensans">Natural Herbs</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-4 mt-10 3xl:w-[1600px] 3xl:mx-auto" id="Brands">
+        <div class="w-11/12 mx-auto">
+          <h4 class="text-[#222222] text-3xl">Newly Arrived Brands</h4>
+          <div class="py-5 w-full mt-3 flex justify-evenly gap-y-4 flex-wrap">
+            <div
+              class="p-3 w-[337px] h-[158px] rounded-xl grid grid-cols-2 gap-x-3 justify-between shadow-md border-2 hover:shadow-xl border-[#f1f1f1] sm:w-full sm:h-max"
+            >
+              <div class="">
+                <img
+                  class="w-full h-full"
+                  alt=""
+                  src="./Assets/New_brands_section_img1.png"
+                />
+              </div>
+              <div class="">
+                <span class="text-[#C7C7C7]">Amber Jar</span>
+                <h4 class="text-[#333333] text-xl">
+                  Honey best nectar you wish to get
+                </h4>
+              </div>
+            </div>
+            <div
+              class="p-3 w-[337px] h-[158px] rounded-xl grid grid-cols-2 gap-x-3 justify-between shadow-md border-2 hover:shadow-xl border-[#f1f1f1] sm:w-full sm:h-max"
+            >
+              <div class="">
+                <img
+                  class="w-full h-full"
+                  alt=""
+                  src="./Assets/New_brands_section_img2.png"
+                />
+              </div>
+              <div class="">
+                <span class="text-[#C7C7C7]">Pure Herb</span>
+                <h4 class="text-[#333333] text-xl">
+                  Pure herb the only natural brand
+                </h4>
+              </div>
+            </div>
+            <div
+              class="p-3 w-[337px] h-[158px] rounded-xl grid grid-cols-2 gap-x-3 justify-between shadow-md border-2 hover:shadow-xl border-[#f1f1f1] sm:w-full sm:h-max"
+            >
+              <div class="">
+                <img
+                  class="w-full h-full"
+                  alt=""
+                  src="./Assets/New_brands_section_img3.png"
+                />
+              </div>
+              <div class="">
+                <span class="text-[#C7C7C7]">Tuna</span>
+                <h4 class="text-[#333333] text-xl">
+                  Where's tuna? Tuna, clear choice!
+                </h4>
+              </div>
+            </div>
+            <div
+              class="p-3 w-[337px] h-[158px] rounded-xl grid grid-cols-2 gap-x-3 justify-between shadow-md border-2 hover:shadow-xl border-[#f1f1f1] sm:w-full sm:h-max"
+            >
+              <div class="">
+                <img
+                  class="w-full h-full"
+                  alt=""
+                  src="./Assets/New_brands_section_img4.png"
+                />
+              </div>
+              <div class="">
+                <span class="text-[#C7C7C7]">Hotz</span>
+                <h4 class="text-[#333333] text-xl">
+                  the one junk food that’s natural
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-4 mt-10 3xl:w-[1600px] 3xl:mx-auto" id="Shop">
+        <div class="w-11/12 mx-auto">
+          <h4 class="text-[#222222] text-3xl">Trending Products</h4>
+          <div
+            class="py-5 w-full mt-3 flex justify-between gap-y-10 flex-wrap smd:justify-center"
+            id="trendingProducts"
+          ></div>
+        </div>
+      </section>
+
+      <section
+        class="py-16 relative w-full overflow-hidden 3xl:w-[1600px] 3xl:mx-auto"
+      >
+        <img
+          src="./Assets/leaves img pattern.png"
+          class="absolute bottom-0 -left-7 w-[300px] h-[300px] object-contain"
+          alt=""
+        />
+        <img
+          src="./Assets/leaves img pattern2.png"
+          class="absolute top-0 -right-8 w-[300px] h-[300px] object-contain"
+          alt=""
+        />
+        <div class="flex justify-between w-11/12 mx-auto gap-8 md:flex-col">
+          <div
+            class="rounded-xl min-h-[370px] bg-sectionimgbg bg-cover w-1/2 bg-[#FFEADA] flex items-center pl-6 pr-4 z-10 lg:flex-col md:w-full"
+          >
+            <div
+              class="flex flex-col gap-y-4 w-6/12 lg:w-full lg:py-4 md:items-center"
+            >
+              <span class="text-[#BC4B68] font-garamondfont text-2xl"
+                >Upto 15% Off</span
+              >
+              <h3 class="text-[#222222] font-nunitofont text-3xl">
+                Luxa Dark Chocolate
+              </h3>
+              <p class="font-opensans text-[#777777]">
+                Chocolate is only the happiness that you can eat.
+              </p>
+              <button
+                class="uppercase w-32 py-3 outline-none rounded-md bg-black text-white hover:text-black hover:bg-transparent border border-black duration-300"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div class="w-6/12 lg:w-full">
+              <img
+                src="./Assets/luxa_dark_chocolate.png"
+                class="w-full h-full"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="rounded-xl min-h-[370px] w-1/2 bg-[#E1F7F9] flex items-center pl-6 pr-4 lg:flex-col md:w-full"
+          >
+            <div
+              class="flex flex-col gap-y-4 w-6/12 lg:w-full lg:py-4 md:items-center"
+            >
+              <span class="text-[#BC4B68] font-garamondfont text-2xl"
+                >Upto 25% Off</span
+              >
+              <h3 class="text-[#222222] font-nunitofont text-3xl">
+                Creamy Muffins
+              </h3>
+              <p class="font-opensans text-[#777777]">
+                Very tasty & creamy vanilla flavour creamy muffins.
+              </p>
+              <button
+                class="uppercase w-32 py-3 outline-none rounded-md bg-black text-white hover:text-black hover:bg-transparent border border-black duration-300"
+              >
+                Shop Now
+              </button>
+            </div>
+            <div class="w-6/12 flex justify-between lg:w-full md:justify-start">
+              <img
+                src="./Assets/Creamy_muffins.png"
+                class="w-full h-full object-contain"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-4 mt-10 3xl:w-[1600px] 3xl:mx-auto" id="Offers">
+        <div class="w-11/12 mx-auto">
+          <div class="flex justify-between">
+            <h4 class="text-[#222222] text-3xl">Top Offered Products</h4>
+            <div class="flex gap-x-5 relative">
+              <button
+                class="bg-[#F1F1F1] h-8 w-8 rounded-lg border border-gray-200 hover:bg-yellow-400 duration-300 swiper3-prev"
+              >
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button
+                class="bg-[#F1F1F1] h-8 w-8 rounded-lg border border-gray-200 hover:bg-yellow-400 duration-300 swiper3-next"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="py-5 w-full mt-3 flex justify-between gap-y-4 flex-wrap">
+            <div class="swiper mySwiper w-ful h-full py-10" id="swiper3">
+              <div class="swiper-wrapper w-full" id="swiper-wrapper3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-10 3xl:w-[1600px] 3xl:mx-auto" id="Discount">
+        <div
+          class="w-11/12 mx-auto relative bg-[#E9F3F8] rounded-xl py-10 px-5"
+        >
+          <img
+            src="./Assets/leaves img pattern.png"
+            class="absolute bottom-0 left-0 w-[300px] h-[300px] object-contain -translate-x-3 translate-y-6"
+            alt=""
+          />
+          <img
+            src="./Assets/leaves img pattern2.png"
+            class="absolute top-0 right-0 w-[300px] h-[300px] object-contain translate-x-5 -translate-y-7"
+            alt=""
+          />
+          <div
+            class="w-9/12 mx-auto flex justify-between md:w-11/12 md:flex-col"
+          >
+            <div class="w-5/12 z-10 md:w-full md:text-center md:mb-9">
+              <h3
+                class="font-nunitofont text-4xl text-[#222222] font-semibold leading-snug"
+              >
+                Get
+                <span class="text-[#ED8939]"> 20% discount </span>
+                <br />
+                on your first <br />
+                purchase
+              </h3>
+              <p class="text-[#555555] mt-4">
+                Just Sign Up & Register it now to become member of FoodMart
+              </p>
+            </div>
+            <div class="min-w-[50%]">
+              <form action="">
+                <div class="">
+                  <label for="">Email Address</label>
+                  <div class="rounded-xl bg-white px-4 py-3 mt-3">
+                    <i class="fa-solid fa-envelope text-[#C8C8C8]"></i>
+                    <input
+                      type="text"
+                      class="w-10/12 outline-none pl-2"
+                      placeholder="john@gmail.com"
+                    />
+                  </div>
+                </div>
+                <div class="my-3">
+                  <label for="">Password</label>
+                  <div class="rounded-xl bg-white px-4 py-3 mt-3">
+                    <i class="fa-solid fa-lock text-[#C8C8C8]"></i>
+                    <input
+                      type="password"
+                      class="w-10/12 outline-none pl-2"
+                      placeholder="Create a password..."
+                      autocomplete="on"
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <label for="">Repeat Password</label>
+                  <div class="rounded-xl bg-white px-4 py-3 mt-3">
+                    <i class="fa-solid fa-lock text-[#C8C8C8]"></i>
+
+                    <input
+                      type="password"
+                      class="w-10/12 outline-none pl-2"
+                      placeholder="Repeat a password...."
+                      autocomplete="on"
+                    />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full py-3 bg-black rounded-xl text-white mt-5 hover:text-black hover:bg-transparent border border-black duration-300"
+                >
+                  REGISTER IT NOW
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-4 mt-10 3xl:w-[1600px] 3xl:mx-auto">
+        <div class="w-11/12 mx-auto">
+          <div class="flex justify-between">
+            <h4 class="text-[#222222] text-3xl">Best Selling Products</h4>
+            <div class="flex gap-x-5 relative">
+              <button
+                class="bg-[#F1F1F1] h-8 w-8 rounded-lg border border-gray-200 hover:bg-yellow-400 duration-300 swiper-prev"
+              >
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button
+                class="bg-[#F1F1F1] h-8 w-8 rounded-lg border border-gray-200 hover:bg-yellow-400 duration-300 swiper-next"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="py-5 w-full mt-3 flex justify-between gap-y-4 flex-wrap">
+            <div class="swiper mySwiper w-ful h-full py-10" id="swiper1">
+              <div class="swiper-wrapper w-full" id="swiper-wrapper1"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-4 mt-10 3xl:w-[1600px] 3xl:mx-auto">
+        <div class="w-11/12 mx-auto">
+          <div class="flex justify-between">
+            <h4 class="text-[#222222] text-3xl">Just Landed Items</h4>
+            <div class="flex gap-x-5 relative">
+              <button
+                class="bg-[#F1F1F1] h-8 w-8 rounded-lg border border-gray-200 hover:bg-yellow-400 duration-300 swiper2-prev"
+              >
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button
+                class="bg-[#F1F1F1] h-8 w-8 rounded-lg border border-gray-200 hover:bg-yellow-400 duration-300 swiper2-next"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="py-5 w-full mt-3 flex justify-between gap-y-4 flex-wrap">
+            <div class="swiper mySwiper w-ful h-full py-10" id="swiper2">
+              <div class="swiper-wrapper w-full" id="swiper-wrapper2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="h-20 w-full"></div>
+      <section class="py-10 mt-10 3xl:w-[1600px] 3xl:mx-auto">
+        <div
+          class="w-10/12 flex justify-around px-10 mx-auto bg-[#FFF9EB] rounded-3xl bg-cover bg-mobileappbg h-[400px] lg:w-11/12 md:flex-col md:h-max md:items-center md:py-5"
+        >
+          <div
+            class="w-4/12 -translate-y-12 xlg:w-5/12 md:translate-x-0 smd:w-9/12"
+          >
+            <img
+              src="./Assets/phone.png"
+              alt=""
+              class="h-[500px] w-full object-contain md:w-full md:h-full"
+            />
+          </div>
+          <div class="w-7/12 flex flex-col gap-y-6 justify-center md:w-full">
+            <h3
+              class="text-[#222222] text-3xl lg:text-2xl lg:font-medium smd:text-center"
+            >
+              Shop faster with foodmart App
+            </h3>
+            <p class="font-opensans text-[#555555] leading-7 smd:text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
+              sed ptibus liberolectus nonet psryroin. Amet sed lorem posuere sit
+              iaculis amet, ac urna. Adipiscing fames semper erat ac in
+              suspendisse iaculis. Amet blandit tortor praesent ante vitae. A,
+              enim pretiummi senectus magna. Sagittis sed ptibus liberolectus
+              non et psryroin.
+            </p>
+            <div
+              class="flex gap-x-2 flex-wrap gap-y-3 md:mx-auto justify-center"
+            >
+              <img
+                src="./Assets/google_logo.png"
+                alt=""
+                class="w-40 object-contain cursor-pointer"
+              />
+              <img
+                src="./Assets/appstore_logo.png"
+                alt=""
+                class="w-40 object-contain cursor-pointer"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-10 mt-14 3xl:w-[1600px] 3xl:mx-auto">
+        <div class="w-11/12 mx-auto">
+          <h4 class="text-[#222222] text-3xl">People are also looking for</h4>
+        </div>
+        <div
+          class="mt-10 flex justify-evenly flex-wrap w-11/12 mx-auto gap-y-3 gap-x-2"
+        >
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Blue diamon almonds
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Angie’s Boomchickapop Corn
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Salty kettle Corn
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Warrior Blend Organic
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Natural Vanilla Light Roast Coffee
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Sweet Vanilla essence Yogurt
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Sweet Vanilla Yogurt
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Angie’s Boomchickapop Corn
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Tree top fruit water
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Encore Seafoods Stuffed Alaskan Salmon
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Mate coffee creamer
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Werther’s caramel hard candies
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Chicken meatballs
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Chao Cheese Creamy
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Chobani Greek Yogurt
+            </p>
+          </div>
+          <div
+            class="rounded-lg bg-[#FCF7EB] py-3 px-4 w-max cursor-pointer hover:bg-[#ffeada] duration-300"
+          >
+            <p class="text-[#555555] font-opensans font-medium">
+              Heniz Tomato Ketchup
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="py-10 my-16 3xl:w-[1600px] 3xl:mx-auto">
+        <div
+          class="w-11/12 mx-auto grid grid-cols-5 xlg:grid-cols-3 gap-y-6 justify-evenly md:grid-cols-2 gap-x-3 smd:grid-cols-1"
+        >
+          <div class="flex gap-x-2">
+            <div class="">
+              <div
+                class="w-10 h-10 rounded-full flex justify-center items-center bg-[#FFF6E2]"
+              >
+                <img src="./Assets/Cart.png" alt="" />
+              </div>
+            </div>
+            <div class="">
+              <h5 class="text-[#222222] text-xl">Free Delivery</h5>
+              <p class="text-[#747474]">
+                Lorem ipsum dolor sit amet, consectetur adipi elit.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-x-2">
+            <div class="">
+              <div
+                class="w-10 h-10 rounded-full flex justify-center items-center bg-[#FFF6E2]"
+              >
+                <img src="./Assets/Secure_payment.png" alt="" />
+              </div>
+            </div>
+            <div class="">
+              <h5 class="text-[#222222] text-xl">100% secure payment</h5>
+              <p class="text-[#747474]">
+                Lorem ipsum dolor sit amet, consectetur adipi elit.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-x-2">
+            <div class="">
+              <div
+                class="w-10 h-10 rounded-full flex justify-center items-center bg-[#FFF6E2]"
+              >
+                <img src="./Assets/Quality.png" alt="" />
+              </div>
+            </div>
+            <div class="">
+              <h5 class="text-[#222222] text-xl">Quality guarantee</h5>
+              <p class="text-[#747474]">
+                Lorem ipsum dolor sit amet, consectetur adipi elit.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-x-2">
+            <div class="">
+              <div
+                class="w-10 h-10 rounded-full flex justify-center items-center bg-[#FFF6E2]"
+              >
+                <img src="./Assets/Guaranteed.png" alt="" />
+              </div>
+            </div>
+            <div class="">
+              <h5 class="text-[#222222] text-xl">Guaranteed Savings</h5>
+              <p class="text-[#747474]">
+                Lorem ipsum dolor sit amet, consectetur adipi elit.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-x-2">
+            <div class="">
+              <div
+                class="w-10 h-10 rounded-full flex justify-center items-center bg-[#FFF6E2]"
+              >
+                <img src="./Assets/Offers.png" alt="" />
+              </div>
+            </div>
+            <div class="">
+              <h5 class="text-[#222222] text-xl">Daily offers</h5>
+              <p class="text-[#747474]">
+                Lorem ipsum dolor sit amet, consectetur adipi elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section Start Here -->
+
+    <footer class="py-10 3xl:w-[1600px] 3xl:mx-auto" id="Contact">
+      <div
+        class="w-11/12 mx-auto grid grid-cols-7 gap-x-4 xlg:grid-cols-4 md:grid-cols-2 gap-y-5 smd:grid-cols-1 smd:items-center"
+      >
+        <div
+          class="col-span-2 smd:col-span-1 md:flex md:flex-col md:items-center"
+        >
+          <img src="./Assets/Logo.png" alt="" />
+          <div class="mt-5 flex gap-x-4 flex-wrap">
+            <a
+              href=""
+              class="border-2 border-[#EFEFEF] w-11 h-11 flex justify-center items-center text-xl hover:shadow-xl hover:text-yellow-400 duration-300"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href=""
+              class="border-2 border-[#EFEFEF] w-11 h-11 flex justify-center items-center text-xl hover:shadow-xl hover:text-yellow-400 duration-300"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a
+              href=""
+              class="border-2 border-[#EFEFEF] w-11 h-11 flex justify-center items-center text-xl hover:shadow-xl hover:text-yellow-400 duration-300"
+            >
+              <i class="fa-brands fa-pinterest"></i>
+            </a>
+            <a
+              href=""
+              class="border-2 border-[#EFEFEF] w-11 h-11 flex justify-center items-center text-xl hover:shadow-xl hover:text-yellow-400 duration-300"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href=""
+              class="border-2 border-[#EFEFEF] w-11 h-11 flex justify-center items-center text-xl hover:shadow-xl hover:text-yellow-400 duration-300"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div class="md:flex md:flex-col md:items-center">
+          <h4 class="font-opensans text-2xl text-[#222222]">Quick Links</h4>
+          <ul class="flex flex-col gap-y-3 text-[#747474]">
+            <li>
+              <a href="" class="hover:text-[#222222]"> Home </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> About us </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Offers </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Services </a>
+            </li>
+            <li><a href="" class="hover:text-[#222222]"> Contact us </a></li>
+          </ul>
+        </div>
+        <div class="md:flex md:flex-col md:items-center">
+          <h4 class="font-opensans text-2xl text-[#222222]">About</h4>
+          <ul class="capitalize flex flex-col gap-y-3 text-[#747474]">
+            <li><a href="" class="hover:text-[#222222]"> How it work </a></li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> our packages </a>
+            </li>
+            <li><a href="" class="hover:text-[#222222]"> promotions </a></li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> refer a friend </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="lg:flex lg:flex-col lg:items-center lg:col-span-2 md:col-span-1"
+        >
+          <h4 class="font-opensans text-2xl text-[#222222]">Help Center</h4>
+          <ul class="flex flex-col gap-y-3 text-[#747474] md:items-center">
+            <li>
+              <a href="" class="hover:text-[#222222]"> Payments </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Shipping </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Product returns </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> FAQs </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Checkout </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Other Issues </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <h4 class="font-opensans text-2xl text-[#222222] md:text-center">
+            Our Newsletter
+          </h4>
+          <p class="font-opensans text-[#747474] my-4 md:text-center">
+            Subscribe to our newsletter to get updates about our grand offers.
+          </p>
+          <div
+            class="bg-[#F4F4F4] rounded-md flex justify-between items-center"
+          >
+            <input
+              type="text"
+              class="bg-transparent outline-none h-full w-7/12 pl-4"
+              placeholder="Enter your Email Address"
+            />
+            <button class="text-white bg-black px-4 py-2 rounded-md">
+              Send
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="mt-8 mb-2 text-center text-[#747474] text-lg">
+        &copy; <span id="year"></span> FoodMart. All rights are reserved.
+      </p>
+    </footer>
+
+    <!-- Footer Ends Here -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="/Js/main.js"></script>
+    <script defer src="/Js/ProductCards.js"></script>
+    <script defer src="/Js/SliderWorking.js"></script>
+  </body>
+</html>
