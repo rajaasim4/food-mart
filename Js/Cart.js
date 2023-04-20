@@ -305,7 +305,7 @@ let generateCartItem = () => {
         let search = allProductsData.find((val) => val.id === id) || [];
         let { name, price, imgsrc } = search;
         return ` <tr class="h-[130px] md:h-max z-10">
-      <td class="text-center  md:block md:text-right ">
+      <td class="text-center  md:flex md:justify-end ">
         <img
           src=${imgsrc}
           class="w-24 h-20 "
