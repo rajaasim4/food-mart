@@ -5,7 +5,7 @@ let ProductData = [
     rating: "4.5",
     prevPrice: 22,
     price: 10.0,
-    imgsrc: "../Assets/sunstar_fresh_melon_juice.png",
+    imgsrc: "./Assets/sunstar_fresh_melon_juice.png",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ let ProductData = [
     rating: "4.3",
     prevPrice: 8,
     price: 5.0,
-    imgsrc: "../Assets/Fresh_local_tomatoes.png",
+    imgsrc: "./Assets/Fresh_local_tomatoes.png",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ let ProductData = [
     rating: "4.5",
     prevPrice: 9,
     price: 4.0,
-    imgsrc: "../Assets/Fresh_cucmber.png",
+    imgsrc: "./Assets/Fresh_cucmber.png",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ let ProductData = [
     rating: "5.0",
     prevPrice: 12,
     price: 9,
-    imgsrc: "../Assets/Heniz_tomato_ketchup.png",
+    imgsrc: "./Assets/Heniz_tomato_ketchup.png",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ let ProductData = [
     rating: "4.7",
     prevPrice: 8,
     price: 4,
-    imgsrc: "../Assets/Local_avacado.png",
+    imgsrc: "./Assets/Local_avacado.png",
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ let ProductData = [
     rating: "4.5",
     prevPrice: 10,
     price: 8,
-    imgsrc: "../Assets/Munch_crunchy_cookies.png",
+    imgsrc: "./Assets/Munch_crunchy_cookies.png",
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ let ProductData = [
     rating: "5",
     prevPrice: 15,
     price: 10,
-    imgsrc: "../Assets/Fresh_bananas.png",
+    imgsrc: "./Assets/Fresh_bananas.png",
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ let ProductData = [
     rating: "4.5",
     prevPrice: 15,
     price: 12,
-    imgsrc: "../Assets/Fresh_orange_juice.png",
+    imgsrc: "./Assets/Fresh_orange_juice.png",
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ let ProductData = [
     rating: "5",
     prevPrice: 8,
     price: 4,
-    imgsrc: "../Assets/Pure_dairy_milk.png",
+    imgsrc: "./Assets/Pure_dairy_milk.png",
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ let ProductData = [
     rating: "5",
     prevPrice: 20,
     price: 15,
-    imgsrc: "../Assets/Raspberries.png",
+    imgsrc: "./Assets/Raspberries.png",
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ let ProductData = [
     rating: "5",
     prevPrice: 5,
     price: 3,
-    imgsrc: "../Assets/Lays.png",
+    imgsrc: "./Assets/Lays.png",
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ let ProductData = [
     rating: "4.5",
     prevPrice: 25,
     price: 20,
-    imgsrc: "../Assets/Amber_pure_honey.png",
+    imgsrc: "./Assets/Amber_pure_honey.png",
   },
   {
     id: 13,
@@ -101,7 +101,7 @@ let ProductData = [
     rating: "5",
     prevPrice: 30,
     price: 25,
-    imgsrc: "../Assets/Pharma_cashew_butter.png",
+    imgsrc: "./Assets/Pharma_cashew_butter.png",
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ let ProductData = [
     rating: "4.2",
     prevPrice: 15,
     price: 11,
-    imgsrc: "../Assets/Suzane_creamy_cupcake.png",
+    imgsrc: "./Assets/Suzane_creamy_cupcake.png",
   },
   {
     id: 15,
@@ -117,7 +117,7 @@ let ProductData = [
     rating: "5",
     prevPrice: 9,
     price: 4,
-    imgsrc: "../Assets/Coca_cola.jpg",
+    imgsrc: "./Assets/Coca_cola.jpg",
   },
   {
     id: 16,
@@ -125,7 +125,7 @@ let ProductData = [
     rating: "5",
     prevPrice: 11,
     price: 7,
-    imgsrc: "../Assets/Mango.png",
+    imgsrc: "./Assets/Mango.png",
   },
 ];
 
@@ -136,7 +136,7 @@ let BestSellingProductsData = [
     rating: "4.5",
     prevPrice: 25,
     price: 20,
-    imgsrc: "../Assets/Fresh_lemon.png",
+    imgsrc: "./Assets/Fresh_lemon.png",
   },
   {
     id: 18,
@@ -144,7 +144,7 @@ let BestSellingProductsData = [
     rating: "4.3",
     prevPrice: 8,
     price: 5,
-    imgsrc: "../Assets/Apple_juice.png",
+    imgsrc: "./Assets/Apple_juice.png",
   },
   {
     id: 19,
@@ -152,7 +152,7 @@ let BestSellingProductsData = [
     rating: "4.5",
     prevPrice: 9,
     price: 4,
-    imgsrc: "../Assets/Katz_white_bread.png",
+    imgsrc: "./Assets/Katz_white_bread.png",
   },
   {
     id: 20,
@@ -160,7 +160,7 @@ let BestSellingProductsData = [
     rating: "5.0",
     prevPrice: 12,
     price: 9,
-    imgsrc: "../Assets/Eminent_chocolate_cookies.png",
+    imgsrc: "./Assets/Eminent_chocolate_cookies.png",
   },
   {
     id: 21,
@@ -168,7 +168,7 @@ let BestSellingProductsData = [
     rating: "4.7",
     prevPrice: 8,
     price: 4,
-    imgsrc: "../Assets/Organic_butter.png",
+    imgsrc: "./Assets/Organic_butter.png",
   },
   {
     id: 22,
@@ -176,7 +176,7 @@ let BestSellingProductsData = [
     rating: "4.5",
     prevPrice: 10,
     price: 8,
-    imgsrc: "../Assets/Local_honey.png",
+    imgsrc: "./Assets/Local_honey.png",
   },
 ];
 let JustLandedProductsData = [
@@ -186,7 +186,7 @@ let JustLandedProductsData = [
     rating: "4.5",
     prevPrice: 22,
     price: 10.0,
-    imgsrc: "../Assets/Jelly_beans_exotics.png",
+    imgsrc: "./Assets/Jelly_beans_exotics.png",
   },
   {
     id: 24,
@@ -194,7 +194,7 @@ let JustLandedProductsData = [
     rating: "4.3",
     prevPrice: 8,
     price: 5,
-    imgsrc: "../Assets/Growers_cider.png",
+    imgsrc: "./Assets/Growers_cider.png",
   },
   {
     id: 25,
@@ -202,7 +202,7 @@ let JustLandedProductsData = [
     rating: "4.5",
     prevPrice: 9,
     price: 4,
-    imgsrc: "../Assets/Fresh_grapes.png",
+    imgsrc: "./Assets/Fresh_grapes.png",
   },
   {
     id: 26,
@@ -210,7 +210,7 @@ let JustLandedProductsData = [
     rating: "5.0",
     prevPrice: 12,
     price: 9,
-    imgsrc: "../Assets/Fresh_pineapple.png",
+    imgsrc: "./Assets/Fresh_pineapple.png",
   },
   {
     id: 27,
@@ -218,7 +218,7 @@ let JustLandedProductsData = [
     rating: "4.7",
     prevPrice: 8,
     price: 4,
-    imgsrc: "../Assets/Fresh_pomegranate.png",
+    imgsrc: "./Assets/Fresh_pomegranate.png",
   },
   {
     id: 28,
@@ -226,7 +226,7 @@ let JustLandedProductsData = [
     rating: "4.5",
     prevPrice: 10,
     price: 8,
-    imgsrc: "../Assets/Fresh_dates.png",
+    imgsrc: "./Assets/Fresh_dates.png",
   },
 ];
 let TopOfferedProducts = [
@@ -236,7 +236,7 @@ let TopOfferedProducts = [
     rating: "4.5",
     prevPrice: 22,
     price: 10.0,
-    imgsrc: "../Assets/Pacific_barista_beverage.png",
+    imgsrc: "./Assets/Pacific_barista_beverage.png",
   },
   {
     id: 30,
@@ -244,7 +244,7 @@ let TopOfferedProducts = [
     rating: "4.3",
     prevPrice: 8,
     price: 5,
-    imgsrc: "../Assets/Kombucha_local_lilikoi.png",
+    imgsrc: "./Assets/Kombucha_local_lilikoi.png",
   },
   {
     id: 31,
@@ -252,7 +252,7 @@ let TopOfferedProducts = [
     rating: "4.5",
     prevPrice: 9,
     price: 4,
-    imgsrc: "../Assets/Oat_milk_barista.png",
+    imgsrc: "./Assets/Oat_milk_barista.png",
   },
   {
     id: 32,
@@ -260,7 +260,7 @@ let TopOfferedProducts = [
     rating: "5.0",
     prevPrice: 12,
     price: 9,
-    imgsrc: "../Assets/Dairymilk_chocolate.png",
+    imgsrc: "./Assets/Dairymilk_chocolate.png",
   },
   {
     id: 33,
@@ -268,7 +268,7 @@ let TopOfferedProducts = [
     rating: "4.7",
     prevPrice: 8,
     price: 4,
-    imgsrc: "../Assets/Dr_raw_relax_hearts.png",
+    imgsrc: "./Assets/Dr_raw_relax_hearts.png",
   },
   {
     id: 34,
@@ -276,7 +276,7 @@ let TopOfferedProducts = [
     rating: "4.5",
     prevPrice: 10,
     price: 8,
-    imgsrc: "../Assets/Fresh_brocolli.png",
+    imgsrc: "./Assets/Fresh_brocolli.png",
   },
 ];
 //*Importing Funtion

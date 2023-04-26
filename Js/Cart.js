@@ -323,7 +323,8 @@ let generateCartItem = () => {
       <button
         class="w-9 h-8 flex justify-center items-center rounded-lg  border border-gray-400" onclick="decrement(${id})"
       >
-        <i class="fa-solid fa-minus text-sm font-normal"></i>
+        
+        <i class="fa-sharp fa-solid fa-minus"></i>
       </button>
     </div></td>
       <td class="text-center md:block md:w-full md:text-right md:before:content-[attr(data-aria-label)] md:before:absolute md:before:left-0 md:before:text-left md:relative  " data-aria-label="Price">$${price}</td>

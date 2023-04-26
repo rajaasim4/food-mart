@@ -24,10 +24,10 @@ module.exports = {
         primarytextcolor: "#898989",
       },
       backgroundImage: {
-        bannerbg1: "url(/Assets/Header_img2.png)",
-        bannerbg2: "url(/Assets/Header_img3.png)",
-        mobileappbg: "url(/Assets/Mobile_app.png)",
-        sectionimgbg: "url(/Assets/section_img_bg1.png)",
+        bannerbg1: "url(./Assets/Header_img2.png)",
+        bannerbg2: "url(./Assets/Header_img3.png)",
+        mobileappbg: "url(./Assets/Mobile_app.png)",
+        sectionimgbg: "url(./Assets/Section_img_bg1.png)",
       },
       fontFamily: {
         opensans: "'Open Sans', sans-serif",
