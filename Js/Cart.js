@@ -295,9 +295,10 @@ let maincartItems = document.querySelector("#mainCartItems");
 
 let cartItems = document.querySelector("#cartItems");
 
-let basket = JSON.parse(localStorage.getItem("data"));
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateCartItem = () => {
+  console.log(basket.length)
   if (basket.length !== 0) {
     return (cartItems.innerHTML = basket
       .map((val) => {
