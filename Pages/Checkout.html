@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="../Assets/Favicon.png"
+      type="image/x-icon"
+    />
+    <!-- <link rel="stylesheet" href="./StyleSheet/Style.css" /> -->
+    <link rel="stylesheet" href="../Style.css" />
+    <title>FoodMart | Cart</title>
+  </head>
+  <body class="bg-[#F9f9f9]">
+    <header class="w-full">
+      <nav class="w-11/12 mx-auto py-5 flex justify-between items-center">
+        <div class="">
+          <a href="../index.html">
+            <img src="../Assets/logo.png" alt="" class="sm:object-contain sm:w-36 " />
+          </a>
+        </div>
+        <div class="flex gap-x-5 items-center">
+          <span
+            class="h-10 w-10 rounded-full bg-[#f1f1f1] grid place-items-center relative cursor-pointer"
+            title="Your Cart"
+          >
+            <span
+              class="bg-yellow-400 text-sm h-6 w-6 rounded-full flex justify-center items-center absolute -top-2 -right-3 border-2 border-white"
+              id="cartTotalQuantity"
+              >0</span
+            >
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+          <div class="">
+            <span class="text-primarytextcolor"> Your Cart </span>
+            <p class="font-medium"
+            id="cartTotalPrice"
+            >$0</p>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="relative w-full overflow-hidden mt-20">
+      <img
+        src="../Assets/leaves img pattern.png"
+        class="absolute bottom-0 -left-7 w-[300px] h-[300px] object-contain -z-10"
+        alt=""
+      />
+      <img
+        src="../Assets/leaves img pattern2.png"
+        class="absolute top-0 -right-8 w-[300px] h-[300px] object-contain -z-10"
+        alt=""
+      />
+      <section
+        class="w-11/12 mx-auto flex justify-between items-start lg:flex-col"
+      >
+       
+        <div class="w-1/2 mx-auto xlg:w-9/12 md:w-11/12 smd:w-full p-2">
+            <form action="">
+              <div class="">
+                <label for="">Name</label>
+                <div class="rounded-xl bg-white px-4 py-3 mt-3">
+                  <i class="fa-solid fa-user text-[#C8C8C8]"></i>
+                  <input
+                    type="text"
+                    class="w-10/12 outline-none pl-2"
+                    placeholder="John Smith"
+                  />
+                </div>
+              </div>
+              <div class="my-3">
+                <label for="">Email Address</label>
+                <div class="rounded-xl bg-white px-4 py-3 mt-3">
+                  <i class="fa-solid fa-envelope text-[#C8C8C8]"></i>
+                  <input
+                    type="text"
+                    class="w-10/12 outline-none pl-2"
+                    placeholder="john@gmail.com"
+                  />
+                </div>
+              </div>
+              <div class="my-3">
+                <label for="">Phone Number</label>
+                <div class="rounded-xl bg-white px-4 py-3 mt-3">
+                  <i class="fa-sharp fa-solid fa-phone text-[#C8C8C8]"></i>
+  
+                  <input
+                    type="tel"
+                    class="w-10/12 outline-none pl-2"
+                    placeholder="+123 456 789"
+                  />
+                </div>
+              </div>
+              <div class="my-3">
+                <label for="">Address</label>
+                <div class="rounded-xl bg-white px-4 py-3 mt-3">
+                  <i class="fa-sharp fa-solid fa-phone text-[#C8C8C8]"></i>
+  
+                  <input
+                    type="text"
+                    class="w-10/12 outline-none pl-2"
+                    placeholder="House # ...."
+                  />
+                </div>
+              </div>
+              <div class="my-3">
+                <label for="">Message</label>
+                <div class="rounded-xl bg-white px-4 py-3 mt-3">
+                
+  
+                  <textarea
+                    type="text"
+                    class="w-10/12 outline-none pl-2"
+                    placeholder="Message (Optional)"
+                    rows="8"
+                  ></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+       
+        <div class="w-5/12 flex flex-col gap-y-5 lg:w-full lg:py-7 z-10">
+          <div class="w-full py-5 md:mt-5 md:w-full">
+            <div
+              class="w-11/12 mx-auto border-4 border-gray-300 px-5 py-7 md:px-3 md:w-full"
+            >
+              <h4 class="text-2xl font-semibold mb-4">Cart Total</h4>
+              <hr class="h-[2px] bg-gray-300" />
+              <div class="flex justify-between my-5 items-center">
+                <span class="text-xl font-semibold block">SubTotal</span>
+                <div class="">
+                  <span class="text-lg mt-6">$</span>
+                  <span class="text-lg font-semibold mt-6" id="subTotal"></span>
+                </div>
+              </div>
+              <hr class="h-[2px] bg-gray-300" />
+              <div class="flex justify-between mt-5 py-3 items-center">
+                <span class="text-md font-bold block">Shipping Cost</span
+                ><span class="text-lg font-semibold mt-6 block">$15</span>
+              </div>
+              <hr class="h-[2px] bg-gray-300" />
+              <div class="flex justify-between my-5 items-center">
+                <span class="text-xl font-bold block">Total</span>
+                <div class="">
+                  <span class="text-3xl text-[#ffc900] mt-6">$</span>
+                  <span
+                    class="text-3xl text-[#ffc900] font-semibold mt-6"
+                    id="totalAmount"
+                  ></span>
+                </div>
+              </div>
+              <button class="btn w-full font-readex mt-5">
+                <a
+                  onclick="alert('Thank You Your Order has been Placed')"
+                  class="uppercase border-2 px-3 py-3 border-[#222] text-white bg-black rounded-md hover:border-gray-400 hover:bg-white hover:text-black duration-500"
+                  >Place Order</a
+                >
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+    <footer class="py-10">
+      <div
+        class="w-11/12 mx-auto grid grid-cols-7 gap-x-4 xlg:grid-cols-4 md:grid-cols-2 gap-y-5 smd:grid-cols-1 smd:items-center"
+      >
+        <div
+          class="col-span-2 smd:col-span-1 md:flex md:flex-col md:items-center"
+        >
+          <img src="../Assets/logo.png" alt="" />
+          <div class="mt-5 flex gap-x-4 flex-wrap">
+            <a
+              href=""
+              class="border-2 border-[#EFEFEF] w-11 h-11 flex justify-center items-center text-xl hover:shadow-xl hover:text-yellow-400 duration-300"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href=""
+              class="border-2 border-[#EFEFEF] w-11 h-11 flex justify-center items-center text-xl hover:shadow-xl hover:text-yellow-400 duration-300"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a
+              href=""
+              class="border-2 border-[#EFEFEF] w-11 h-11 flex justify-center items-center text-xl hover:shadow-xl hover:text-yellow-400 duration-300"
+            >
+              <i class="fa-brands fa-pinterest"></i>
+            </a>
+            <a
+              href=""
+              class="border-2 border-[#EFEFEF] w-11 h-11 flex justify-center items-center text-xl hover:shadow-xl hover:text-yellow-400 duration-300"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href=""
+              class="border-2 border-[#EFEFEF] w-11 h-11 flex justify-center items-center text-xl hover:shadow-xl hover:text-yellow-400 duration-300"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div class="md:flex md:flex-col md:items-center">
+          <h4 class="font-opensans text-2xl text-[#222222]">Quick Links</h4>
+          <ul class="flex flex-col gap-y-3 text-[#747474]">
+            <li>
+              <a href="" class="hover:text-[#222222]"> Home </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> About us </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Offers </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Services </a>
+            </li>
+            <li><a href="" class="hover:text-[#222222]"> Contact us </a></li>
+          </ul>
+        </div>
+        <div class="md:flex md:flex-col md:items-center">
+          <h4 class="font-opensans text-2xl text-[#222222]">About</h4>
+          <ul class="capitalize flex flex-col gap-y-3 text-[#747474]">
+            <li><a href="" class="hover:text-[#222222]"> How it work </a></li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> our packages </a>
+            </li>
+            <li><a href="" class="hover:text-[#222222]"> promotions </a></li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> refer a friend </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="lg:flex lg:flex-col lg:items-center lg:col-span-2 md:col-span-1"
+        >
+          <h4 class="font-opensans text-2xl text-[#222222]">Help Center</h4>
+          <ul class="flex flex-col gap-y-3 text-[#747474] md:items-center">
+            <li>
+              <a href="" class="hover:text-[#222222]"> Payments </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Shipping </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Product returns </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> FAQs </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Checkout </a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#222222]"> Other Issues </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <h4 class="font-opensans text-2xl text-[#222222] md:text-center">
+            Our Newsletter
+          </h4>
+          <p class="font-opensans text-[#747474] my-4 md:text-center">
+            Subscribe to our newsletter to get updates about our grand offers.
+          </p>
+          <div
+            class="bg-[#F4F4F4] rounded-md flex justify-between items-center"
+          >
+            <input
+              type="text"
+              class="bg-transparent outline-none h-full w-7/12 pl-4"
+              placeholder="Enter your Email Address"
+            />
+            <button class="text-white bg-black px-4 py-2 rounded-md">
+              Send
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="mt-8 mb-2 text-center text-[#747474] text-lg">
+        &copy; <span id="year"></span> FoodMart. All rights are reserved.
+      </p>
+    </footer>
+
+    <!-- <script defer src="./Cart.js"></script> -->
+    <script defer src="../Js/CheckOut.js"></script>
+  </body>
+</html>
