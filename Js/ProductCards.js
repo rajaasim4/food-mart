@@ -487,8 +487,7 @@ let update = (id) => {
   let search = basket.find((val) => val.id === id);
   document.getElementById(`quantity${id}`).innerHTML = search.quantity;
   calculateItems();
-  // generateShopItems();
-  // generateSliderProduct();
+  totalAmount();
 };
 
 let calculateItems = () => {
@@ -499,3 +498,16 @@ let calculateItems = () => {
   cartTotalQuntity.innerHTML = totalQuantity;
 };
 calculateItems();
+
+function totalAmount() {
+  if (basket.lengt !== 0) {
+    let amount = basket
+      .map((val) => {
+        let { id, quantity } = val;
+        let search = allProductsData.find((x) => x.id === id) || [];
+        return quantity * search.price;
+      })
+      .reduce((x, y) => x + y, 0);
+    document.querySelector("#cartTotalPrice").innerHTML = amount + 15;
+  } else return;
+}

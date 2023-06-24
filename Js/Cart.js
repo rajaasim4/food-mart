@@ -343,10 +343,12 @@ let generateCartItem = () => {
   } else {
     cartItems.innerHTML = ``;
     maincartItems.innerHTML = ` 
-  <div className="">
-  <h2 class="text-center text-4xl ">Your Cart is Empty</h2>
-  <a href="../index.html"  class="uppercase border-2 px-3 py-3 border-[#222] text-white bg-black rounded-md hover:border-gray-400 hover:bg-white hover:text-black duration-500">Go Back to Home</a>
+    <tr>
+  <div className="flex flex-col gap-y-6">
+  <h2 class="text-center text-4xl mb-10 ">Your Cart is Empty</h2>
+  <a href="../index.html"  class="uppercase border-2 px-3 py-3 border-[#222] text-white bg-black rounded-md hover:border-gray-400 hover:bg-white hover:text-black duration-500 mt-7">Go Back to Home</a>
   </div>
+  </tr>
     `;
   }
 };
