@@ -423,6 +423,7 @@ function totalAmount() {
       })
       .reduce((x, y) => x + y, 0);
     document.querySelector("#subTotal").innerHTML = amount;
+    document.querySelector("#cartTotalPrice").innerHTML = `$${amount}`;
     document.querySelector("#totalAmount").innerHTML = amount + 15;
   } else return;
 }

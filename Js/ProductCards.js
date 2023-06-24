@@ -279,6 +279,14 @@ let TopOfferedProducts = [
     imgsrc: "./Assets/Fresh_brocolli.png",
   },
 ];
+//*Combining all the data
+
+let allProductsData = [
+  ...BestSellingProductsData,
+  ...JustLandedProductsData,
+  ...ProductData,
+  ...TopOfferedProducts,
+];
 //*Importing Funtion
 
 //*Showing Data for Trending Prodcuts
@@ -412,6 +420,8 @@ let generateSliderProduct = (wraper, Data) => {
   }).join(""));
 };
 
+
+
 //*Best Selling Products  Section
 
 let swiperWraper = document.querySelector("#swiper-wrapper1");
@@ -499,6 +509,7 @@ let calculateItems = () => {
 };
 calculateItems();
 
+let cartPrice=document.querySelector("#cartTotalPrice");
 function totalAmount() {
   if (basket.lengt !== 0) {
     let amount = basket
@@ -508,6 +519,8 @@ function totalAmount() {
         return quantity * search.price;
       })
       .reduce((x, y) => x + y, 0);
-    document.querySelector("#cartTotalPrice").innerHTML = amount + 15;
+      
+      cartPrice.innerHTML = `$${amount}`;
   } else return;
 }
+totalAmount();
