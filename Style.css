@@ -812,6 +812,10 @@ video {
   height: max-content;
 }
 
+.h-44 {
+  height: 11rem;
+}
+
 .min-h-\[300px\] {
   min-height: 300px;
 }
@@ -939,6 +943,10 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-44 {
+  width: 11rem;
 }
 
 .min-w-\[50\%\] {
@@ -2146,7 +2154,28 @@ video {
     height: max-content;
   }
 
+  .sm\:h-44 {
+    height: 11rem;
+  }
+
   .sm\:w-full {
     width: 100%;
+  }
+
+  .sm\:w-44 {
+    width: 11rem;
+  }
+
+  .sm\:w-32 {
+    width: 8rem;
+  }
+
+  .sm\:w-36 {
+    width: 9rem;
+  }
+
+  .sm\:object-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
