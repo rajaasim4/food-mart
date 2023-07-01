@@ -319,4 +319,4 @@ function totalAmount() {
     generateCartItem();
     totalAmount();
   };
-  
+  calculateItemsQuantity();
